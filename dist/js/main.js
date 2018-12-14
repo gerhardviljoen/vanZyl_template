@@ -1,5 +1,5 @@
 let header_navBar = document.querySelector("#page_header");
-
+console.log("main.js");
 window.addEventListener("scroll", () => {
   if (
     document.body.scrollTop > 200 ||
