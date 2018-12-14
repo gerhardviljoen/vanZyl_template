@@ -1,0 +1,63 @@
+@import "config";
+
+body {
+  #contact_page {
+    #top-section {
+      display: flex;
+      height: 30vh;
+
+      .landing-content {
+        color: $white-color;
+        margin: auto;
+
+        h1 {
+          font-size: 5em;
+          margin: 0;
+        }
+      }
+    }
+
+    #map-section {
+      background: $light-grey;
+      // height: 70vh;
+      text-align: center;
+      overflow: hidden;
+
+      h1 {
+        font-size: 3em;
+        color: $primary-color;
+      }
+
+      .map_container {
+        margin: auto;
+        margin-bottom: 5em;
+        justify-content: center;
+        display: flex;
+
+        .iframeMap {
+          width: 100%;
+          margin: 0 20em;
+        }
+      }
+    }
+
+    #contact-section {
+      background: $primary-color;
+      height: 50vh;
+      padding: 2em 0em;
+
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+
+        .contact_information {
+          align-items: center;
+          color: $white-color;
+          display: grid;
+          grid-template-columns: 5em 10em;
+          grid-gap: 2em;
+          grid-column: 2;
+        }
+      }
+    }
+  }
+}

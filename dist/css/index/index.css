@@ -1,0 +1,141 @@
+.content_wrap {
+  margin: auto;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.info_card {
+  background: #ffff;
+  cursor: pointer;
+  margin: 2em;
+}
+
+.header_logo {
+  background: url("../../img/companylogo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 38px;
+  width: 200px;
+  position: relative;
+}
+
+#section-a {
+  background: url("../../img/plan.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /***/
+  display: flex;
+  height: 100vh;
+}
+
+#section-a .landing-content {
+  color: rgba(245, 245, 245, 0.993);
+  margin: 2rem;
+}
+
+#section-a .landing-content h1 {
+  font-size: 5em;
+  margin: 0;
+}
+
+#section-a .landing-content h3 {
+  font-size: 2em;
+  margin: 0;
+}
+
+#section-a .landing-content p {
+  margin: auto;
+  width: 70%;
+}
+
+#section-b {
+  text-align: center;
+}
+
+#section-b .grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+#section-b .grid .card_one {
+  grid-column: 2;
+}
+#section-b .grid .card_two {
+  grid-column: 3;
+}
+#section-b .grid .card_three {
+  grid-column: 4;
+}
+
+#section-c .content {
+  display: inline-block;
+  border-top: 1px solid rgba(196, 196, 196, 0.548);
+  width: 70%;
+  max-width: 1300px;
+}
+
+#section-c .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+
+#section-c #card1 {
+  background-image: url("../../img/recentWork/picture\(2\).jpg");
+}
+#section-c #card2 {
+  background-image: url("../../img/recentWork/picture\(3\).jpg");
+}
+#section-c #card3 {
+  background-image: url("../../img/recentWork/picture\(4\).jpg");
+}
+#section-c #card4 {
+  background-image: url("../../img/recentWork/picture\(5\).jpg");
+}
+
+#section-d {
+  background: #eece1a;
+  color: rgba(37, 37, 37, 0.925);
+}
+
+#section-f {
+  background: rgba(37, 37, 37, 0.925);
+  color: rgba(245, 245, 245, 0.993);
+}
+
+#section-f .content {
+  display: inline-block;
+}
+
+#section-f .grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#section-f .owner_photo {
+  background-image: url("../../img/profiles/profile_icon.png");
+  background-size: cover;
+}
+
+#section-e {
+  background: rgba(37, 37, 37, 0.925);
+
+  color: rgba(245, 245, 245, 0.993);
+}
+
+#section-e .content {
+  border-bottom: 1px solid #eece1a;
+  margin: 0 5em;
+}
+
+#section-e .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+
+#section-e .profile_icon {
+  background: url("../../img/profiles/profile_icon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
