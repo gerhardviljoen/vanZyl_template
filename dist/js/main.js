@@ -1,5 +1,7 @@
+let mobile_menu_button = document.querySelector("#btn_menu");
+let menu_container = document.querySelector("#menu_container");
 let header_navBar = document.querySelector("#page_header");
-console.log("main.js");
+
 window.addEventListener("scroll", () => {
   if (
     document.body.scrollTop > 200 ||
@@ -8,5 +10,15 @@ window.addEventListener("scroll", () => {
     header_navBar.classList.add("scroll");
   } else {
     header_navBar.classList.remove("scroll");
+  }
+});
+
+mobile_menu_button.addEventListener("click", () => {
+  if (mobile_menu_button.classList.contains("close")) {
+    mobile_menu_button.classList.remove("close");
+    menu_container.classList.remove("close");
+  } else {
+    mobile_menu_button.classList.add("close");
+    menu_container.classList.add("close");
   }
 });

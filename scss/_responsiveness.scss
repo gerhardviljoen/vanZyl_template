@@ -1,0 +1,66 @@
+//Tablet
+
+@include mediaTablet {
+  body {
+    .section_content_wrap {
+      padding: 0 4rem;
+    }
+
+    main {
+      #section-b .grid {
+        grid-gap: 2rem;
+      }
+
+      #section-c .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+      }
+
+      #section-e {
+        #review_cards{
+        .reviewcard {
+          margin: 1rem 0.5rem;
+        }
+      }
+    }
+    }
+  }
+}
+
+@include mediaLaptop {
+  body {
+    .section_content_wrap {
+      padding: 0 6rem;
+    }
+
+    main {
+      #section-b .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+      }
+
+      #section-c .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+      }
+
+      #section-e {
+
+        #review_cards{
+          .reviewcard {
+            display: flex;
+            margin: 1rem 0.5rem;
+            .top{
+              margin: auto;
+              height: 110px;
+            }
+            .bottom
+            {
+              margin: auto;
+            }
+          }
+        }        
+      }
+    }
+  }
+}

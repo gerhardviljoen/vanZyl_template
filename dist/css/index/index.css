@@ -1,4 +1,40 @@
-.content_wrap {
+#section-a {
+  background: url("../../img/plan.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header_logo {
+  background: url("../../img/companylogo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 38px;
+  width: 200px;
+  position: relative;
+}
+
+#section-c #card1 {
+  background-image: url("../../img/recentWork/picture\(2\).jpg");
+}
+
+#section-c #card2 {
+  background-image: url("../../img/recentWork/picture\(3\).jpg");
+}
+#section-c #card3 {
+  background-image: url("../../img/recentWork/picture\(4\).jpg");
+}
+#section-c #card4 {
+  background-image: url("../../img/recentWork/picture\(5\).jpg");
+}
+
+#section-f .owner_photo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* .content_wrap {
   margin: auto;
   text-align: center;
 }
@@ -13,21 +49,12 @@
   margin: 2em;
 }
 
-.header_logo {
-  background: url("../../img/companylogo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 38px;
-  width: 200px;
-  position: relative;
-}
+
 
 #section-a {
   background: url("../../img/plan.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /***/
   display: flex;
   height: 100vh;
 }
@@ -82,18 +109,7 @@
   grid-gap: 2em;
 }
 
-#section-c #card1 {
-  background-image: url("../../img/recentWork/picture\(2\).jpg");
-}
-#section-c #card2 {
-  background-image: url("../../img/recentWork/picture\(3\).jpg");
-}
-#section-c #card3 {
-  background-image: url("../../img/recentWork/picture\(4\).jpg");
-}
-#section-c #card4 {
-  background-image: url("../../img/recentWork/picture\(5\).jpg");
-}
+
 
 #section-d {
   background: #eece1a;
@@ -138,4 +154,4 @@
   background: url("../../img/profiles/profile_icon.png");
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */

@@ -1,230 +1,324 @@
 // Core Styles
 @import "config";
+@import "menu";
+
+// @import "contact-us";
 
 * {
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+html {
+  overflow-y: auto !important;
 }
 
 body {
+  cursor: default;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   height: 100%;
   margin: 0;
-  cursor: default;
 
   span {
     color: $secondary-color;
   }
 
-  i {
-    overflow: hidden;
-    color: $white-color;
+  // i {
+  //   color: $white-color;
+  // }
+
+  h1 {
+    font-size: 2em;
   }
 
-  header {
-    background: rgba((lighten($primary-color, 5)), 0.1);
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    padding: 1rem;
-    position: fixed;
+  .btn {
+    background: rgba((darken($primary-color, 5)), 0.4);
+    color: $white-color;
+    border: 1px solid;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0.5em;
+    width: 8em;
+    margin: auto;
+    margin-top: 25px;
     @include easeOut;
 
-    &.scroll {
-      background: rgba((darken($primary-color, 10)), 0.9);
+    &:hover {
+      background: $secondary-color;
     }
+  }
 
-    .container {
-      .nav-contact-details {
-        color: $white-color;
-        border-bottom: 1px solid;
-        display: flex;
-        font-size: 12px;
-        margin-bottom: 6px;
-
-        .nav-cd {
-          margin-bottom: 6px;
-          margin-right: 2em;
-
-          span {
-            color: $secondary-color;
-          }
-        }
-
-        .social-icons {
-          cursor: pointer;
-          i {
-            overflow: hidden;
-          }
-        }
-      }
-
-      .row {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-
-        nav {
-          ul {
-            display: inline-flex;
-            margin: 0;
-
-            li {
-              margin: 0 2rem;
-              font-size: 14px;
-              overflow: hidden;
-
-              a {
-                color: $white-color;
-                text-decoration: none;
-              }
-
-              :hover {
-                @include easeOut;
-                color: $secondary-color;
-                border-bottom: 2px solid $secondary-color;
-              }
-
-              .nav-selected {
-                color: $secondary-color;
-                border-bottom: 2px solid $secondary-color;
-              }
-            }
-          }
-        }
-      }
-    }
+  .section_content_wrap {
+    margin: auto;
+    padding: 0 1rem;
   }
 
   main {
-    .btn {
-      background: rgba((darken($primary-color, 5)), 0.4);
-      color: $white-color;
-      border: 1px solid;
-      border-radius: 2px;
-      cursor: pointer;
-      padding: 0.5em;
-      width: 8em;
-      margin: auto;
-      margin-top: 25px;
-      @include easeOut;
+    #section-a {
+      display: flex;
+      height: 100vh;
 
-      &:hover {
-        background: $secondary-color;
+      .landing-content {
+        color: $white-color;
+        display: block;
+        text-align: center;
       }
     }
 
     #section-b {
-      .info_card {
-        border: 1px solid $light-grey;
-        border-radius: 20px;
+      cursor: default;
+      text-align: center;
+      padding-bottom: 1rem;
 
-        @include easeOut;
-        &:hover {
-          background: darken($primary-color, 5);
-          color: $secondary-color;
-          border: none;
+      .grid {
+        display: grid;
+        grid-gap: 1rem;
+
+        .sectionb_card {
+          border: 1px solid $light-grey;
+          border-radius: 4px;
+          padding: 0 0.5rem;
+          @include easeOut;
+
+          &:hover {
+            background: darken($primary-color, 5);
+            color: $secondary-color;
+          }
         }
       }
     }
 
     #section-c {
-      .image_cards {
-        border: 1px solid rgba(196, 196, 196, 0.548);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 19em;
-        margin: 1em;
+      text-align: center;
+      background: lighten($light-grey, 10);
+      padding-bottom: 1rem;
 
+      .grid {
+        display: grid;
+        grid-gap: 1rem;
+
+        .image_cards {
+          height: 13em;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          .text_cards {
+            padding: 0 0.5rem;
+            background: $secondary-color-opacity;
+            height: 0;
+            @include easeOut;
+          }
+
+          &:hover {
+            .text_cards {
+              height: 100%;
+              @include easeOut;
+            }
+          }
+        }
+      }
+    }
+
+    #section-d {
+      background: $secondary-color;
+      padding-bottom: 1rem;
+      text-align: center;
+
+      #btn_readMore {
         @include easeOut;
 
         &:hover {
-          box-shadow: 0px 0px 14px 2px rgba($primary-color, 0.6);
+          background: $primary-color;
         }
       }
     }
 
     #section-e {
-      .review-container {
-        margin: auto;
-        margin-bottom: 2em;
-        width: 80%;
+      text-align: center;
+      padding-bottom: 1rem;
+      box-shadow: $box-shadow-value;
+      // background: $light-grey;
 
-        .review-card {
+      #review_cards {
+        .reviewcard {
           background: $white-color;
-          border: 1px solid;
-          border-radius: 2px;
-          color: $primary-color;
-          display: flex;
+          box-shadow: $box-shadow-value;
+          margin: 1rem;
+          padding: 0.5rem;
+          
 
-          .profile_icon {
+          .top {
+            height: 130px;
+            img {
+              border-radius: 50%;
+              height: 100%;
+              background: lightgray;
+            }
+          }
+
+          i {
+            color: $secondary-color-opacity;
+            opacity: 0.4;
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    #section-f{
+      
+      background: $primary-color;
+      color:$white-color;
+
+      .grid{
+        display: grid;
+        text-align: center;
+
+        .about-section{
+          
+          border-bottom: 1px solid $secondary-color;
+          padding-bottom: 1em;
+          
+           img{
+             height: 130px;             
+            background: lightgrey;
             border-radius: 50%;
-            height: 140px;
-            margin: auto;
-            width: 30%;
-          }
-
-          .profile_review {
-            margin: auto 0.5em;
-            text-align: left;
-            width: 70%;
-            p {
-              font-style: italic;
-              span {
-                color: $secondary-color;
-                font-weight: 900;
-                font-size: 20px;
-              }
-            }
-
-            .author {
-              font-size: 0.8em;
-            }
-          }
+           }          
         }
       }
-    }
-
-    #section-f {
-      .about_us {
-        margin: auto 10em;
-
-        .owner_photo {
-          height: 5em;
-          width: 5em;
-          margin: auto;
-        }
-      }
-
-      .contact_details {
-        margin: auto;
-
-        .contact_us {
-          display: grid;
-          align-items: center;
-          justify-content: center;
-          margin: 0em;
-          text-align: left;
-          grid-template-columns: 2em 11em;
-          grid-gap: 20px;
-        }
-      }
-    }
-  }
-
-  footer {
-    padding: 1rem;
-    background: $dark-black;
-    color: #fff;
-    text-align: center;
-
-    a {
-      color: #2690d4;
-      text-decoration: none;
     }
   }
 }
 
-@import "contact-us";
+footer {
+  padding: 1rem;
+  background: darken($dark-black, 3);
+  color: #fff;
+  text-align: center;
+
+  a {
+    color: #2690d4;
+    text-decoration: none;
+  }
+}
+
+@import "responsiveness";
+
+// main {
+//   .btn {
+//     background: rgba((darken($primary-color, 5)), 0.4);
+//     color: $white-color;
+//     border: 1px solid;
+//     border-radius: 2px;
+//     cursor: pointer;
+//     padding: 0.5em;
+//     width: 8em;
+//     margin: auto;
+//     margin-top: 25px;
+//     @include easeOut;
+
+//     &:hover {
+//       background: $secondary-color;
+//     }
+//   }
+
+//   #section-b {
+//     .info_card {
+//       border: 1px solid $light-grey;
+//       border-radius: 20px;
+
+//       @include easeOut;
+//       &:hover {
+//         background: darken($primary-color, 5);
+//         color: $secondary-color;
+//         border: none;
+//       }
+//     }
+//   }
+
+//   #section-c {
+//     .image_cards {
+//       border: 1px solid rgba(196, 196, 196, 0.548);
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//       background-position: center;
+//       height: 19em;
+//       margin: 1em;
+
+//       @include easeOut;
+
+//       &:hover {
+//         box-shadow: 0px 0px 14px 2px rgba($primary-color, 0.6);
+//       }
+//     }
+//   }
+
+//   #section-e {
+//     .review-container {
+//       margin: auto;
+//       margin-bottom: 2em;
+//       width: 80%;
+
+//       .review-card {
+//         background: $white-color;
+//         border: 1px solid;
+//         border-radius: 2px;
+//         color: $primary-color;
+//         display: flex;
+
+//         .profile_icon {
+//           border-radius: 50%;
+//           height: 140px;
+//           margin: auto;
+//           width: 30%;
+//         }
+
+//         .profile_review {
+//           margin: auto 0.5em;
+//           text-align: left;
+//           width: 70%;
+//           p {
+//             font-style: italic;
+//             span {
+//               color: $secondary-color;
+//               font-weight: 900;
+//               font-size: 20px;
+//             }
+//           }
+
+//           .author {
+//             font-size: 0.8em;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   #section-f {
+//     .about_us {
+//       margin: auto 10em;
+
+//       .owner_photo {
+//         height: 5em;
+//         width: 5em;
+//         margin: auto;
+//       }
+//     }
+
+//     .contact_details {
+//       margin: auto;
+
+//       .contact_us {
+//         display: grid;
+//         align-items: center;
+//         justify-content: center;
+//         margin: 0em;
+//         text-align: left;
+//         grid-template-columns: 2em 11em;
+//         grid-gap: 20px;
+//       }
+//     }
+//   }
+// }
